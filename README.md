@@ -1,2 +1,2 @@
 # lcsbgo-test
-Heroku tests application
+Heroku test application
