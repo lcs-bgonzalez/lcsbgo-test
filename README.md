@@ -1,2 +1,2 @@
 # lcsbgo-test
-Heroku test application
+Heroku test application for DOCKER
