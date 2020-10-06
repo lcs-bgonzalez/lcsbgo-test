@@ -16,6 +16,6 @@ jobs:
       - name: Send HTTP request
         uses: fjogeleit/http-request-action@master
         with:
-          url: 'https://chat.googleapis.com/v1/spaces/AAAA8TuZlfY/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=G5mWBo6IvkrE_h6BuOX--QbytUVol9YOkiLI-tFAhL8%3D'
+          url: 'https://chat.googleapis.com/v1/spaces/AAAAKKUxGFw/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=GwXy1u8hxGbTdusa1iF9rfI7gsAvnXuUKZCCVFf8Dnc%3D'
           method: 'POST'
-          data: '{"text": "${{ github.repository }} - Nueva release publicada: "${{ github.event.release.name }}" (${{ github.event.release.tag_name }}) por ${{ github.event.release.author.login }}"}'
+          data: '{"text": "${{ github.repository }} - Nueva release publicada: "${{ github.event.release.name }}" (${{ github.event.release.tag_name }}) por "}'
