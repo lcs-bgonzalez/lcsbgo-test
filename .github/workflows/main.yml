@@ -18,4 +18,4 @@ jobs:
         with:
           url: 'https://chat.googleapis.com/v1/spaces/AAAAKKUxGFw/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=GwXy1u8hxGbTdusa1iF9rfI7gsAvnXuUKZCCVFf8Dnc%3D'
           method: 'POST'
-          data: '{"text": "${{ github.repository }} - Nueva release publicada: "${{ github.event.release.name }}" (${{ github.event.release.tag_name }}) por "}'
+          data: '{"text": "${{ github.repository }} - Nueva release publicada: \"${{ github.event.release.name }}\" (${{ github.event.release.tag_name }}) por ${{ github.event.release.author.login }}"}'
