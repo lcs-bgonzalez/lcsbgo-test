@@ -1,0 +1,21 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Release notification to Google Chat room
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  release:
+    branches: [ master ]
+    types: [ published ]
+
+jobs:
+  notify-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send HTTP request
+        uses: fjogeleit/http-request-action@master
+        with:
+          url: 'https://chat.googleapis.com/v1/spaces/AAAA8TuZlfY/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=G5mWBo6IvkrE_h6BuOX--QbytUVol9YOkiLI-tFAhL8%3D'
+          method: 'POST'
+          data: '{"text": "Pringaos"}'
