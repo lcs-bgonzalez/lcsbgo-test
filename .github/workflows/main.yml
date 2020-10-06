@@ -13,13 +13,9 @@ jobs:
   notify-release:
     runs-on: ubuntu-latest
     steps:
-      - name: echo
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
       - name: Send HTTP request
         uses: fjogeleit/http-request-action@master
         with:
           url: 'https://chat.googleapis.com/v1/spaces/AAAA8TuZlfY/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=G5mWBo6IvkrE_h6BuOX--QbytUVol9YOkiLI-tFAhL8%3D'
           method: 'POST'
-          data: '{"text": "${{ github.repository }} - nueva release publicada: "}'
+          data: '{"text": "${{ github.repository }} - nueva release publicada: ${{ github.event.release.tag_name }} / ${{ github.event.release.name }} por ${{ github.event.release.login }}"}'
