@@ -19,3 +19,4 @@ jobs:
           url: 'https://chat.googleapis.com/v1/spaces/AAAAKKUxGFw/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=GwXy1u8hxGbTdusa1iF9rfI7gsAvnXuUKZCCVFf8Dnc%3D'
           method: 'POST'
           data: '{"cards":[{"header":{"title":"${{ github.repository }} - Nueva release","subtitle":"${{ github.event.release.author.login }}","imageUrl":"https://github.com/fluidicon.png","imageStyle":"IMAGE"},"sections":[{"widgets":[{"keyValue":{"topLabel":"Versión","content":"${{ github.event.release.name }} (${{ github.event.release.tag_name }})"}},{"textParagraph":{"text":"${{ github.event.release.body }}"}},{"buttons":[{"textButton":{"text": "Abrir en GitHub","onClick":{"openLink":{"url":"${{ github.event.release.html_url }}"}}}}]}]}]}]}'
+          escapeData: true
